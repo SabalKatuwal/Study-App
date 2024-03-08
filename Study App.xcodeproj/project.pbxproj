@@ -14,6 +14,9 @@
 		A62E2D312B9B070A00CCAC1B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E2D302B9B070A00CCAC1B /* BaseView.swift */; };
 		A62E2D332B9B079500CCAC1B /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E2D322B9B079500CCAC1B /* BaseViewModel.swift */; };
 		A62E2D352B9B080600CCAC1B /* CustomCurveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E2D342B9B080600CCAC1B /* CustomCurveShape.swift */; };
+		A62E2D392B9B16BC00CCAC1B /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62E2D382B9B16BC00CCAC1B /* TopView.swift */; };
+		A62E2D3D2B9B1D1700CCAC1B /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A62E2D3C2B9B1D1700CCAC1B /* Poppins-Light.ttf */; };
+		A62E2D3F2B9B1D4100CCAC1B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A62E2D3E2B9B1D4100CCAC1B /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,10 @@
 		A62E2D302B9B070A00CCAC1B /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		A62E2D322B9B079500CCAC1B /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		A62E2D342B9B080600CCAC1B /* CustomCurveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCurveShape.swift; sourceTree = "<group>"; };
+		A62E2D382B9B16BC00CCAC1B /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		A62E2D3A2B9B1B3000CCAC1B /* Study-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Study-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A62E2D3C2B9B1D1700CCAC1B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		A62E2D3E2B9B1D4100CCAC1B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,8 @@
 		A62E2D212B9AFCF900CCAC1B /* Study App */ = {
 			isa = PBXGroup;
 			children = (
+				A62E2D3B2B9B1CFD00CCAC1B /* fonts */,
+				A62E2D3A2B9B1B3000CCAC1B /* Study-App-Info.plist */,
 				A62E2D222B9AFCF900CCAC1B /* Study_AppApp.swift */,
 				A62E2D372B9B14E600CCAC1B /* ViewModel */,
 				A62E2D362B9B14DD00CCAC1B /* Views */,
@@ -80,6 +89,7 @@
 				A62E2D242B9AFCF900CCAC1B /* ContentView.swift */,
 				A62E2D342B9B080600CCAC1B /* CustomCurveShape.swift */,
 				A62E2D302B9B070A00CCAC1B /* BaseView.swift */,
+				A62E2D382B9B16BC00CCAC1B /* TopView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +100,15 @@
 				A62E2D322B9B079500CCAC1B /* BaseViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A62E2D3B2B9B1CFD00CCAC1B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A62E2D3C2B9B1D1700CCAC1B /* Poppins-Light.ttf */,
+				A62E2D3E2B9B1D4100CCAC1B /* Poppins-SemiBold.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A62E2D2A2B9AFCFA00CCAC1B /* Preview Assets.xcassets in Resources */,
+				A62E2D3F2B9B1D4100CCAC1B /* Poppins-SemiBold.ttf in Resources */,
+				A62E2D3D2B9B1D1700CCAC1B /* Poppins-Light.ttf in Resources */,
 				A62E2D272B9AFCFA00CCAC1B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +187,7 @@
 				A62E2D332B9B079500CCAC1B /* BaseViewModel.swift in Sources */,
 				A62E2D352B9B080600CCAC1B /* CustomCurveShape.swift in Sources */,
 				A62E2D252B9AFCF900CCAC1B /* ContentView.swift in Sources */,
+				A62E2D392B9B16BC00CCAC1B /* TopView.swift in Sources */,
 				A62E2D232B9AFCF900CCAC1B /* Study_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +325,7 @@
 				DEVELOPMENT_TEAM = PSX93NF7U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Study-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -332,6 +355,7 @@
 				DEVELOPMENT_TEAM = PSX93NF7U3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Study-App-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
