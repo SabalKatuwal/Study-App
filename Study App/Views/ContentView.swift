@@ -14,10 +14,10 @@ struct ContentView: View {
     @State var currentSlider: Int = 0
     
     var body: some View {
-        VStack{
+        ScrollView{
             TopView()
             
-            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Container@*/VStack/*@END_MENU_TOKEN@*/ {
+            VStack {
                 HStack(spacing: 15){
                     ContainerContentView(primaryColor: Color("containerColor1.2"), primaryTitle: "Chem", secondaryColor: Color("containerColor1.1"), secondaryIcon: "microscope", secondaryIconHeight: 25)
                         .shadow(color: Color("containerColor1.1").opacity(0.4), radius: 20, x: 0, y: 5)
@@ -41,7 +41,34 @@ struct ContentView: View {
             }
             .offset(y: -32)
             
+            //MARK: POPULAR COURSES
+            VStack(alignment: .leading){
+                
+                HStack(spacing: 0) {
+                    Text("Popular")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    Text(" Courses")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundStyle(Color("20color"))
+                }
+                ScrollView(.horizontal) {
+                    HStack {
+                        HorizontalScrollView(image: "ioeEntrance", title: "IOE Entrance Peparation")
+                        
+                        HorizontalScrollView(image: "mobileDevelopment", title: "App Development Bootcamp")
+                    }
+                    
+                }
+                .scrollIndicators(.hidden)
+            }
+            .padding(.horizontal)
+            .offset(y: -60)
             
+            
+            
+            //END OF POPULAR COURSES
         
     
             Spacer()
