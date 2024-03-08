@@ -56,13 +56,10 @@ struct TopView: View {
                 .foregroundColor(.black)
             
             Text("Hello")
-                .font(.title)
-                .fontWeight(.light)
-                .fontDesign(.monospaced)
+                .font(.custom("Poppins-Light", size: 30))
             Text("Sabal")
-                .font(.largeTitle)
-                .fontDesign(.monospaced)
-//                .fontWeight(.medium)
+                .font(.custom("Poppins-SemiBold", size: 44))
+                .offset(y: -5)
         }
         .padding()
             // END APP BAR
