@@ -15,44 +15,52 @@ struct ContainerContentView: View {
     var secondaryIconHeight: Double
     
     var body: some View {
-        ZStack{
-            ContainerView(primaryColor: primaryColor, secondaryColor: secondaryColor)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(color: .black, radius: 5)
-                .rotationEffect(.degrees(90), anchor: .center)
+        Button{
+            
+        } label: {
+            
+            ZStack{
+                ContainerView(primaryColor: primaryColor, secondaryColor: secondaryColor)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .rotationEffect(.degrees(90), anchor: .center)
+                    
                 
-            
-            
-            HStack {
-                VStack{
-                    Image("study")
+                
+                HStack {
+                    VStack{
+                        Image("study")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: 45)
+                            .foregroundColor(Color.white)
+                            .padding(.top, 8)
+                        
+                        Text(primaryTitle)
+                            .font(.body)
+                            .foregroundColor(Color.primary)
+                            
+                    }
+    //                .offset(x: -22)
+                    Image("\(secondaryIcon)")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(height: 45)
-                        .foregroundColor(Color.gray)
-                    
-                    Text(primaryTitle)
-                        .font(.body)
-                        .foregroundColor(Color.primary)
-                        .padding(.top, 8)
+                        .frame(height: CGFloat(secondaryIconHeight))
+                        .foregroundColor(Color.black)
+                        .offset(x: 30)
                 }
-                .offset(x: -22)
+                .offset(y: -35)
                 
-                Image(systemName: secondaryIcon)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(height: CGFloat(secondaryIconHeight))
-                    .foregroundColor(Color.white)
-                    .offset(x: 58)
+                
             }
-            
-            
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .scaledToFit()
+
         }
-        .frame(width: 200, height: 280, alignment: .center)
+
     }
 }
 
 
 #Preview {
-    ContainerContentView(primaryColor: Color("20color"), primaryTitle: "Chemistry", secondaryColor: .red, secondaryIcon: "flask", secondaryIconHeight: 30)
+    ContainerContentView(primaryColor: Color("20color"), primaryTitle: "Chemistry", secondaryColor: .red, secondaryIcon: "math", secondaryIconHeight: 30)
 }

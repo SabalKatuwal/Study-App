@@ -11,19 +11,25 @@ struct ContainerView: View {
     var primaryColor: Color
     var secondaryColor: Color
     var body: some View {
-        ZStack(alignment: .topLeading){
-            Rectangle()
-                .fill(primaryColor)
-            Rectangle()
-                .fill(secondaryColor)
-                .frame(width: .infinity , height: 50)
-            Rectangle()
-                .fill(secondaryColor)
-                .frame(width: .infinity , height: 100)
-                .clipShape(Ellipse())
-            
+        
+        GeometryReader{ geometry in
+        
+            ZStack(alignment: .topLeading){
+                Rectangle()
+                    .fill(primaryColor)
+                Rectangle()
+                    .fill(secondaryColor)
+                    .frame(width: .infinity , height: 25)
+                Rectangle()
+                    .fill(secondaryColor)
+                    .frame(width: .infinity , height: 60)
+                    .clipShape(Ellipse())
+                
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .frame(width: geometry.size.width * 2/3)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 20))
+        .scaledToFit()
         
     }
 }

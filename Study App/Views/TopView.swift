@@ -60,6 +60,8 @@ struct TopView: View {
             Text("Sabal")
                 .font(.custom("Poppins-SemiBold", size: 44))
                 .offset(y: -5)
+            
+            
         }
         .padding()
             // END APP BAR

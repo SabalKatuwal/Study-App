@@ -17,17 +17,23 @@ struct BaseView: View {
     
     var body: some View {
         TabView(selection: $baseData.currentTab) {
-            ContentView()
-                .environmentObject(baseData)
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Color.black.opacity(0.04))
+            VStack {
+                ContentView()
+                    .environmentObject(baseData)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(Color.black.opacity(0.04))
                 .tag(Tab.Home)
+                
+                
+            }
             Text("heart")
                 .tag(Tab.Heart)
             Text("Clipboard")
                 .tag(Tab.ClipBoard)
             Text("Person")
                 .tag(Tab.Person)
+            
+            
         }
         .overlay(
             // MARK: - CUSTOM TAB BAR
@@ -72,6 +78,11 @@ struct BaseView: View {
             , alignment: .bottom
         )
     }
+    
+    
+    
+    
+    
     @ViewBuilder
     func TabButton(Tab: Tab)-> some View {
         Button {
